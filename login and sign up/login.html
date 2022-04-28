@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        .box{
+          /* margin-left: 200px; */
+          /* border: 1px solid saddlebrown; */
+          width: 20%;
+          margin: auto;
+          text-align: center;
+          
+        }
+        .box>div{
+            margin: auto;
+        }
+        #password{
+            display: block;
+            margin-bottom: 20px;
+            margin-left: 50px;
+
+        } 
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div>
+            <form id="getdata">
+                <h2>Sign in</h2>
+                <h3>Email</h3>
+                <input type="email" id="email" placeholder="enter your email" >
+                <h3>Password</h3>
+                 <input type="text" id="password" placeholder="enter your pswd" >
+                 <input type="submit" id="sub" >
+             </form>
+        </div>
+    </div>
+    
+</body>
+</html>
+
+<script>
+    var objdata = JSON.parse(localStorage.getItem("objdata"));
+    document.querySelector("#getdata").addEventListener("submit",findsome);
+
+    function findsome(){
+        // event.preventDefault();
+        if(objdata.userEmail == email.value && objdata.userPassword == password.value){
+            alert("sucessfully login")
+
+        }
+        else if(objdata.userEmail != email.value && objdata.userPassword != password.value){
+            alert("Please enter valid email & password");
+            
+        }
+        else {
+            alert("User does not exist");   
+        }
+    }
+    // displayPrinter(objArr);
+
+    // function displayPrinter(objArr){
+
+    // }
+   
+
+    
+</script>

@@ -1,0 +1,18 @@
+*{
+    margin: 0%;
+    padding: 0px;
+}
+#nav{
+    display: flex;
+    justify-content: space-around;
+    background-color: royalblue;
+}
+#nav>div{
+    padding: 20px;
+
+}
+#nav>div>a{
+    color: white;
+    font-size: 21px;
+    text-decoration: none;
+}
